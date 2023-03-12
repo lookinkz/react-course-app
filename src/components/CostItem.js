@@ -1,12 +1,16 @@
 import "./CostItem.css";
 
 function CostItem() {
+  const costDate = new Date(2023, 3, 12);
+  const costDescription = "Холодильник";
+  const costAmount = 999.99;
+
   return (
     <div className="cost-item">
-      <div>11 марта 2023 года</div>
+      <div>{costDate.toUTCString()}</div>
       <div className="cost-item__description">
-        <h2>Холодильник</h2>
-        <div className="cost-item__price">$999.99</div>
+        <h2>{costDescription}</h2>
+        <div className="cost-item__price">${costAmount}</div>
       </div>
     </div>
   );
